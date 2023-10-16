@@ -12,8 +12,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
 
     private var isPlayButtonStart = false
-    private var audioFileName: String = "audio"
-    lateinit var progressUpdate: Runnable
+    private var audioFileName: String = "skype"
+    private lateinit var progressUpdate: Runnable
     private var mMediaPlayer: MediaPlayer = MediaPlayer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         try {
 
             mMediaPlayer.release()
+            mMediaPlayer.pause()
 
         } catch (ex: Exception) {
             ex.printStackTrace()
